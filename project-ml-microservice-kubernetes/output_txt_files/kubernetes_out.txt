@@ -1,1 +1,6 @@
-<paste log output from Kubernetes-mediated prediction, here>
+pod/predict-app-container created
+pod/predict-app-container condition met
+NAME                    READY   STATUS    RESTARTS   AGE
+predict-app-container   1/1     Running   0          14s
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
