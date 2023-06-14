@@ -1,6 +1,20 @@
-pod/predict-app-container created
-pod/predict-app-container condition met
-NAME                    READY   STATUS    RESTARTS   AGE
-predict-app-container   1/1     Running   0          14s
-Forwarding from 127.0.0.1:8080 -> 80
-Forwarding from [::1]:8080 -> 80
+Output from ./run_kubernetes.sh:
+    (base) bluesky@Blues-MacBook-Pro project-ml-microservice-kubernetes % ./run_kubernetes.sh 
+    pod/predict-app-container created
+    pod/predict-app-container condition met
+    NAME                    READY   STATUS    RESTARTS   AGE
+    predict-app-container   1/1     Running   0          5s
+    Forwarding from 127.0.0.1:8080 -> 80
+    Forwarding from [::1]:8080 -> 80
+    Handling connection for 8080
+
+
+
+Output from ./make_prediction.sh 
+    (base) bluesky@Blues-MacBook-Pro project-ml-microservice-kubernetes % ./make_prediction.sh 
+    Port: 8080
+    {
+    "prediction": [
+        20.35373177134412
+    ]
+    }
