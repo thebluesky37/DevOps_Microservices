@@ -8,7 +8,7 @@ jobs:
     docker:
       # Use the same Docker base as the project
       - image: python:3.7.3-stretch
-    working_directory: ~/repo
+    working_directory: ~/repo/project-ml-microservice-kubernetes
     steps:
       - checkout
       # List files
@@ -27,9 +27,10 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            cd project-ml-microservice-kubernetes
+            pwd
+            ls -la      
             python3 -m venv venv
-            . .venv/bin/activate
+            . venv/bin/activate
             make install
             # Install hadolint
             wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
@@ -44,6 +45,5 @@ jobs:
       - run:
           name: run lint
           command: |
-            cd project-ml-microservice-kubernetes
-            . .venv/bin/activate
+            . venv/bin/activate
             make lint
